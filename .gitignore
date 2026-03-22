@@ -1,0 +1,33 @@
+# Data and outputs
+Data/
+Result/
+logs/
+evaluation_summary/
+wandb/
+swanlog/
+conf_threshold/
+*.csv
+
+# Weights / checkpoints
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.onnx
+*.engine
+*.weights
+*.safetensors
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Notebook/runtime
+.ipynb_checkpoints/
+*.log
+
+# OS/IDE
+.DS_Store
+Thumbs.db
+.vscode/

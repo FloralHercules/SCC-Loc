@@ -1,0 +1,35 @@
+TEST_INTERVAL: 1
+REGIONS:
+  - changsha
+  # - QZ_Town
+DEVICE: cuda
+RETRIEVAL_METHODS:
+  #  - CAMP
+  #  - MINIMA_Roma_DINOv2
+   - DINOv3
+  #  - DINOv2
+MATCHING_METHODS:
+  # - Roma
+  # - RoMaV2
+  # - MINIMA_Roma      
+  - MINIMA_LoFTR   
+  # - MINIMA_XoFTR
+  # - MINIMA_LightGlue
+PNP_METHODS:
+  - P3P
+
+USE_DEM: true
+
+RETRIEVAL_COVER: 60
+RETRIEVAL_TOPN: 5
+RETRIEVAL_IMG: /1_Retrieval.png
+RETRIEVAL_IMG_NUM: 5
+RETRIEVAL_FEATURE_NORM: true
+# SHOW_RETRIEVAL_RESULT: true
+SHOW_RETRIEVAL_RESULT: false
+BATCH_SIZE: 120
+
+SPLIT: "train"
+# SPLIT: "test"
+# MODALITY: "Visible"
+MODALITY: "Thermal"

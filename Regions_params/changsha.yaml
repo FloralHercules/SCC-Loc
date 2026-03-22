@@ -1,0 +1,16 @@
+changsha_UTM_SYSTEM: 49N
+changsha_SAMPLE_INTERVAL: 10
+changsha_UAV_PLACES:
+  - cs1
+changsha_HIGH_REF_PATH: ./Data/Reference_map/changsha/ref.tif
+changsha_HIGH_DSM_PATH: ./Data/Reference_map/changsha/dsm.tif
+changsha_HIGH_REF_initialX: 694811.4577
+changsha_HIGH_REF_initialY: 3130673.6615
+changsha_HIGH_REF_resolution: 0.3
+changsha_HIGH_DSM_resolution: 0.3
+changsha_HIGH_REF_COORDINATE:
+  - 0.0
+  - 0.0
+changsha_HIGH_DSM_COORDINATE: 
+  - 0.0
+  - 0.0
