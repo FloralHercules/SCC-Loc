@@ -1718,7 +1718,7 @@ def visualize_final_localization(ref_img, uav_img, true_pos, pred_pos, config, r
         # draw FoV and crop satellite image
         if 0 <= t_col < w and 0 <= t_row < h:
             uav_res, uav_size_px = resolution_size(true_pos, opt) 
-            
+            uav_size_px = [1280, 1024] # use the original UAV image size
             scale_factor = uav_res / ref_res
             
             box_w_sat = int(uav_size_px[1] * scale_factor)
