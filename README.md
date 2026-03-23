@@ -49,7 +49,7 @@ Data/
   └── test/
 ```
 
-The Thermal-UAV is  provided in Baidu Netdisk. Please use the `process.ipynb` to get the metadate of Thermal-UAV JSON format, as follows:
+The Thermal-UAV dataset and checkpoint are provided in [Baidu Netdisk](https://pan.baidu.com/s/1gORHGMLm3yQ75tCFmCPQLQ?pwd=NUDT) and [Hugging Face](https://huggingface.co/datasets/FloralHercules/Thermal-UAV/tree/main). You can use the `process.ipynb` to get the metadate of Thermal-UAV JSON format, as follows:
 
 ```json
 {
