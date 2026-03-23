@@ -15,7 +15,7 @@
 <p>
 🎯 We present a unified Semantic-Cascade-Consensus framework (SCC-Loc) for cross-modal UAV thermal geo-localization in GNSS-denied environments.
 This approach is particularly useful for overcoming the profound modality gap between onboard thermal imagery and visible-light satellite maps, which typically causes spatial quantization biases, dense structural outliers, and deceptive visual decoys during pose estimation. By seamlessly integrating a shared DINOv2 backbone with our Semantic-Guided Viewport Alignment (SGVA) module, Cascaded Spatial-Adaptive Texture-Structure Filtering (C-SATSF) mechanism, and Consensus-Driven Reliability-Aware Position Selection (CD-RAPS) strategy, we achieve zero-shot, highly accurate absolute pose estimation without the need for domain-specific training.
-We also construct Thermal-UAV, a comprehensive cross-modal benchmark dataset comprising 11,615 thermal images that capture complex urban-rural topologies and multi-temporal (day-night) variations, paired with satellite ortho-photos and spatially aligned Digital Surface Models (DSMs). This dataset addresses current data scarcity and serves as a robust resource for evaluating all-weather UAV positioning algorithms.
+We also construct Thermal-UAV, a comprehensive cross-modal benchmark dataset comprising 11,890 thermal images that capture complex urban-rural topologies and multi-temporal (day-night) variations, paired with satellite ortho-photos and spatially aligned Digital Surface Models (DSMs). This dataset addresses current data scarcity and serves as a robust resource for evaluating all-weather UAV positioning algorithms.
 </p>
 
 ## Dataset
@@ -24,7 +24,7 @@ We also construct Thermal-UAV, a comprehensive cross-modal benchmark dataset com
   <img src="assets/Dataset.png" alt="Logo" width="1000"/>
 </div>
 
-We construct the **Thermal-UAV** dataset which comprised 11,615 Thermal UAV images  (nadir view, multi-time, multi- scenario, flight sequence composition) using the DJI Matrice 4T drone around changsha. We split it as three sets: training (8,115), validation (1,150), and testing (2,350). Meanwhile, we collect the  0.26 m/px Google map and 5.29 m/px Digital Surface Model (DSM). The structure of Thermal-UAV is shown as follows:
+We construct the **Thermal-UAV** dataset which comprised 11,890 Thermal UAV images  (nadir view, multi-time, multi- scenario, flight sequence composition) using the DJI Matrice 4T drone around changsha. We split it as three sets: training (8,115), validation (1,425), and testing (2,350). Meanwhile, we collect the  0.26 m/px Google map and 5.29 m/px Digital Surface Model (DSM). The structure of Thermal-UAV is shown as follows:
 
 ```text
 Data/

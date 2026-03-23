@@ -26,7 +26,9 @@ SHOW_RETRIEVAL_RESULT: true
 # SHOW_RETRIEVAL_RESULT: false
 BATCH_SIZE: 120
 
-SPLIT: "train"
-# SPLIT: "test"
+# SPLIT: "train"
+SPLIT: "test"
+# SPLIT: "valid"
+
 # MODALITY: "Visible"
 MODALITY: "Thermal"
