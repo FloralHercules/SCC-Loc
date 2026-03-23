@@ -1538,7 +1538,7 @@ def retrieval_all(ref_image, UAV_path, uav_data, ref_resolution, matRotation, sa
         p_i = d_i / block_size[0]
         PDE_list.append(p_i)
 
-    show_n = config['RETRIEVAL_IMG_NUM']
+    show_n = config['SHOW_RETRIEVAL_IMG_NUM']
     
     # shown retrieval results
     if config['SHOW_RETRIEVAL_RESULT']:
@@ -1580,7 +1580,7 @@ def retrieval_all(ref_image, UAV_path, uav_data, ref_resolution, matRotation, sa
 
     # shown retrieval shift trajectories
     if config['SHOW_RETRIEVAL_RESULT']:
-        vis_count = config['RETRIEVAL_IMG_NUM'] 
+        vis_count = config['SHOW_RETRIEVAL_IMG_NUM'] 
         
         gt_rc = (center_y, center_x) 
 

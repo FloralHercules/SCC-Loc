@@ -1,7 +1,5 @@
 changsha_UTM_SYSTEM: 49N
 changsha_SAMPLE_INTERVAL: 10
-changsha_UAV_PLACES:
-  - cs1
 changsha_HIGH_REF_PATH: ./Data/Reference_map/changsha/ref.tif
 changsha_HIGH_DSM_PATH: ./Data/Reference_map/changsha/dsm.tif
 changsha_HIGH_REF_initialX: 694811.4577

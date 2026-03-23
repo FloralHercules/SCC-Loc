@@ -1,243 +1,155 @@
-<!--
-Hey, thanks for using the awesome-readme-template template.  
-If you have any enhancements, then fork this project and create a pull request 
-or just open an issue with the label "enhancement".
-
-Don't forget to give this project a star for additional support ;)
-Maybe you can mention me or this repo in the acknowledgements too
--->
 <div align="center">
-  <video src="https://github.com/user-attachments/assets/396b94f9-3f8c-43fe-a358-17a73b812e14" controls="controls" width="500" height="300"></video>
-  <!--<img src="overview.png" alt="logo" width="400" height="auto" />-->
-  <h1>The First Large-scale Benchmark for UAV Visual Localization under Low-altitude Multi-view Observation Condition</h1>
-  
-  <p>
-    This benchmark focuses on UAV visual localization under Low-altitude Multi-view observation condition using the 2.5D aerial or satellite reference maps. The visual localization is mainly achieved via a unified framework combining image retrieval, image matching, and PnP problem solving. 
+  <img src="assets/UAV.png" alt="Logo" width="150"/>
+  <h1>SCC-Loc: A Unified Semantic-Cascade-Consensus Framework for UAV Thermal Geo-Localization</h1>
+ If you find our work useful, please consider giving us a ⭐️. Your support means a lot to us! 🥰
 
-  </p>
-[Paper](https://arxiv.org/pdf/2503.10692) 
-    
-<p>  
-   If you find our work useful, please consider giving us a ⭐️. Your support means a lot to us! 🥰
- </p>   
-<!--<h4>
-    <a href="https://github.com/Louis3797/awesome-readme-template/">View Paper</a>
-  <span> · </span>
-    <a href="https://github.com/Louis3797/awesome-readme-template">Download Dataset</a>
-  <span> · </span>
-    <a href="https://github.com/Louis3797/awesome-readme-template/issues/">View demo</a>
-
-  </h4>-->
-</div>
-
-<br />
-
-<!-- Table of Contents -->
-# :notebook_with_decorative_cover: Table of Contents
-- [Todo List](#todo)
-- [The AnyVisLoc Dataset](#about-the-dataset)
-  * [UAV Images Examples](#UAV-Images)
-  * [Reference Map Examples](#Reference-Maps)
-  * [Dataset Features](#Dataset-Features)
-- [The Baseline Demo](#baseline)
-  * [Installation](#Installation)
-  * [Download Files](#Download)
-  * [Run the demo](#running)
-  * [Test Your Dataset](#test_dataset)
-  * [Test Your Visual Localization Approaches](#test_approaches)
-- [FAQ](#FAQ)
-- [License](#License)
-- [Acknowledgments](#Acknowledgments)
-  
-<!-- Roadmap -->
-<a name="todo"></a>
-## :compass: Todo List
-
-* [x] Release a demo of the best combined method (Baseline) to achieve UAV visual localization.
-* [x] Release 1/25 of the dataset for demo testing. (The region is an old town in Qingzhou City，China)
-* [ ] Release all the UAV visual localization approaches evaluated in the benchmark.
-* [ ] Release the whole dataset evaluated in the benchmark.
-
-<!-- About the AnyVisLoc Dataset -->
-<a name="about-the-dataset"></a>
-## 📸: The AnyVisLoc Dataset: First Large-scale Low-altitude Multi-view UAV AVL dataset
+<div align="center">
+  <img src="assets/Pipeline.png" alt="Logo" width="1000"/>
 
 
-<!-- UAV Images Examples -->
-<a name="UAV-Images"></a>
-### ✈️: UAV Images
+<p>
+🎯 We present a unified Semantic-Cascade-Consensus framework (SCC-Loc) for cross-modal UAV thermal geo-localization in GNSS-denied environments.
+This approach is particularly useful for overcoming the profound modality gap between onboard thermal imagery and visible-light satellite maps, which typically causes spatial quantization biases, dense structural outliers, and deceptive visual decoys during pose estimation. By seamlessly integrating a shared DINOv2 backbone with our Semantic-Guided Viewport Alignment (SGVA) module, Cascaded Spatial-Adaptive Texture-Structure Filtering (C-SATSF) mechanism, and Consensus-Driven Reliability-Aware Position Selection (CD-RAPS) strategy, we achieve zero-shot, highly accurate absolute pose estimation without the need for domain-specific training.
+We also construct Thermal-UAV, a comprehensive cross-modal benchmark dataset comprising 11,615 thermal images that capture complex urban-rural topologies and multi-temporal (day-night) variations, paired with satellite ortho-photos and spatially aligned Digital Surface Models (DSMs). This dataset addresses current data scarcity and serves as a robust resource for evaluating all-weather UAV positioning algorithms.
+</p>
 
-<div align="center"> 
-  <img src="assets/overview_supp.png" alt="UAV Image Examples" />
-</div>
+## Dataset
 
-<!-- Reference Map -->
-<a name="Reference-Maps"></a>
-### 🗺️: Reference Maps
+<div align="center">
+  <img src="assets/Dataset.png" alt="Logo" width="1000"/>
 
-<div align="center"> 
-  <img src="assets/reference_map_new1.png" alt="Reference Map Examples" />
-</div>
+We construct the **Thermal-UAV** dataset which comprised 11,615 Thermal UAV images  (nadir view, multi-time, multi- scenario, flight sequence composition) using the DJI Matrice 4T drone around changsha. We split it as three sets: training (8,115), validation (1,150), and testing (2,350). Meanwhile, we collect the  0.26 m/px Google map and 5.29 m/px Digital Surface Model (DSM). The structure of Thermal-UAV is shown as follows:
 
-<!-- Dataset Features -->
-<a name="Dataset-Features"></a>
-### 🌟: Dataset Features
-- **Large scale:** **18,000** full-resolution DJI images taken from **15** different cities across China. The reference maps cover **25** distinct regions ranging in coverage area from **10,000 $m^2$ to 9,000,000 $m^2$**.
-- **Multi-altitude:** The dataset contains low-altitude flight conditions from **30m to 300m**.
-- **Multi-view:**  The dataset covers common used pitch angle of UAV imaging from **20° to 90°**.
-- **Multi-scene:** The dataset includes various scenes, such as dense **urban** areas (e.g., cities, towns, country), typical **landmark** scenes (e.g., playground, museums, church), **natural** scenes (e.g., farmland and mountains), and **mixed** scenes (e.g., universities and  park).
-- **Multi-reference map:** The dataset provides two types of 2.5D reference maps for different purposes. The **aerial map** with high spatial resolution can be used for high-precision localization but needs pre-aerial photogrammetry. The **satellite map** serves as an alternative when the aerial map is unavailable.
-- **Multi-drone type:** Mavic 2, Mavic 3, Mavic 3 Pro, Phantom 3, Phantom 4, Phantom 4 RTK, Mini 4 Pro
-- **Others:** multiple weather(☀️⛅☁️🌫️🌧️), seasons(🌻🍀🍂⛄), illuminations(🌇🌆)
-
-
-<!-- Running the baseline demo -->
-<a name="baseline"></a>
-## 	🚩: The Baseline Demo
-
-<!-- Installation -->
-<a name="Installation"></a>
-### :gear: Installation
-Clone the project
-
-```bash
-  git clone https://github.com/UAV-AVL/Benchmark.git
+```text
+Data/
+├── metadata/
+│   ├── train_Thermal.json
+│   ├── valid_Thermal.json
+│   └── test_Thermal.json
+├── Reference_map/
+│   └── changsha/
+│       ├── ref.tif
+│       └── dsm.tif
+└── Thermal-UAV/
+  ├── train/
+  │   └── changsha/
+  │       └── <place_name>/
+  │           └── Thermal/
+  │               ├── xxx1.JPG
+  │               ├── xxx2.JPG
+  |		  └── ...
+  |	      └──  Thermal_info.csv
+  ├── valid/
+  └── test/
 ```
 
-Install dependencies(tested on windows python 3.9)
+The Thermal-UAV is  provided in Baidu Netdisk. Please use the `process.ipynb` to get the metadate of Thermal-UAV JSON format, as follows:
 
-```bash
-  pip install -r requriements.txt
-```
-   
-<!-- Download-->
-<a name="Download"></a>
-### ⬇️: Download Files
-1. **Dataset**
-  - Our dataset(1/25) is available at [Baidu Netdisk](https://pan.baidu.com/s/17U7YkFIwKcGjl-FmXmNlxg?pwd=ki5n) and [Google Drive](https://drive.google.com/file/d/1GmBOD_5tB9GyHdLmDlXY6--RAsCJbLQf/view) 
-  - Please download the dataset and place it in the `./UAV_AVL_demo/Data`
-  - Dataset are stored in the `./Data` folder like this:
-```
-  UAV_AVL_demo/Data/
-  ├── metadata
-  │   ├── test_region_name1.json
-  │   ├── test_region_name2.json
-  │   ├── ...
-  ├── Reference_map
-  │   ├── test_region_name1
-  │   │   ├── aerial_2D_reference_map.tif
-  │   │   ├── aerial_DSM_reference_map.tif
-  │   │   ├── satellite_2D_reference_map.tif
-  │   │   ├── satellite_DSM_reference_map.tif
-  │   ├── test_region_name2
-  │   ├──  ...
-  └── UAV_image
-    ├── test_region_name1
-    │   ├── region1_place1
-    │   │   ├── DJI_0001.JPG
-    │   │   ├── DJI_0002.JPG
-    │   │   ├── DJI_0003.JPG
-    │   │   ├── ...
-    │   ├── region1_place2
-    │   │   ├── DJI_0001.JPG
-    │   │   ├── DJI_0002.JPG
-    │   │   ├── DJI_0003.JPG
-    │   │   ├── ...
-    ├── test_region_name2
-    │   ├──  ...
-```
-
-2. **Model Weights**
-- The model weights for image retrieval and matching are available at [CAMP](https://github.com/Mabel0403/CAMP) and [Roma](https://github.com/Parskatt/RoMa) 
-- We have also uploaded them on  [Baidu Netdisk](https://pan.baidu.com/s/1EqnCKiAiQfwDM7Y3LQ0QLg?pwd=q42r) and [Google Drive](https://drive.google.com/file/d/1GmBOD_5tB9GyHdLmDlXY6--RAsCJbLQf/view) 
-- Please download the weights and place them in the following directories:
-  + For CAMP: `./Retrieval_Models/CAMP/weights/xxx.pth`
-  + For RoMa: `./Matching_Models/RoMa/ckpt/xxx.pth`
-
-
-<!-- Run Locally -->
-<a name="running"></a>
-### :running: Run the demo
-
-This baseline use the [CAMP](https://github.com/Mabel0403/CAMP) model for image-level retrieval and the [Roma](https://github.com/Parskatt/RoMa) model for pixel-level matching, just run
-```bash
-  python baseline.py
-```
-<a name="test_dataset"></a>
-### :rocket: Test your dataset
-If you want to test your own dataset, please follow these steps:
-
-1. **Prepare Drone Images**:
-   - Place your drone images in the directory `.\Data\UAV_image\your_test_region`.
-   - The default image format is JPG. If you use a different format (e.g., PNG), make sure to adjust the image reading function accordingly.
-
-2. **Prepare Reference Maps**:
-   - Put your reference maps in the directory `.\Data\Reference_map\your_test_region`.
-   - Both the 2D reference map and the corresponding DSM (Digital Surface Model) map are required.
-   - The default image format is TIF. If you use a different format, please convert it appropriately.
-
-3. **Configure Metadata**:
-   - Put your drone metadata in `.\Data\metadata\your_test_region.json`.
-   - Ensure that this JSON file includes all necessary information (e.g., image path, drone 6 DoF pose and camera intrinsics).
-   - Put the reference map information of your test region in `.\Regions_params\your_test_region.yaml`.
-   - Ensure that this YAML file includes all necessary information (e.g., image path, spatial resolution, the WGS84 UTM system of test region and the initial coordinates of reference maps).
-   - Please note that the parameters named `xxx_REF_COORDINATE` and `xxx_DSM_COORDINATE`  are used to align the 2D reference map with the DSM map. You can use geographic information software such as [ENVI](https://www.nv5geospatialsoftware.com/Products/ENVI) to open both TIF images simultaneously and select the pixel coordinates of any corresponding points as inputs for these parameters.
-
-<a name="test_approaches"></a>
-### 🔆: Test Your Visual Localization Approaches
-If you want to test your visual localization approaches, please follow these steps:
-
-1. **Test Your Own Image Retrieval Model**:
-  - **Place Your Folder:** Put your main folder at the  `./Retrieval_Models/your_approach`.
-  - **Modify Files:** Update the following files:
-    + `multi_model_loader.py`: Contains the function calls for image retrieval methods.
-    + `feature_extract.py`: Contains the functions for network feature processing.
-    + `config.yaml`: Add the name of your image retrieval method.
-  - **Suggestion:** Refer to the functions we have provided for corresponding modifications.
-2. **Test Your Own Image Matching Model**:
-  - **Place Your Folder:** Put your main folder at the `./Matching_Models/your_approach`.
-  - **Modify Files:** Update the following files:
-    + Add a `xxx_match.py` File: Include the model initialization function `xxx_Init()` and the image matching function `xxx_match()`.
-Refer to our provided Roma_match.py for modifications.
-    + Modify `utils.py`: Update the `matching_init()` function and the `Match2Pos_all()` function.
-Add the invocation module for your method within these functions.
-    + `config.yaml`: Add the name of your image matching method.
-
-<!-- FAQ -->
-<a name="FAQ"></a>
-## :grey_question: FAQ
-
-- **Why do we need to perform image retrieval before image matching?**
-
-  + In UAV visual localization tasks, the reference map's coverage area is often much larger than the real-time images captured by the UAV. Directly applying pixel-level matching algorithms in such scenarios would lead to a massive search space and significant computational and storage pressures. Additionally, under low-altitude oblique observation conditions, image-level retrieval exhibits better robustness to viewpoint differences compared to pixel-level matching. Therefore, we recommend first using image-level retrieval (also known as visual geo-localization or visual place recognition) to find the approximate location of the UAV image, and then performing pixel-level matching.
-    
-- **Why do we provide both aerial photogrammetry reference maps and satellite maps?**
-
-  + These two types of reference maps have different advantages and disadvantages. Aerial maps offer superior localization accuracy but are more cumbersome to produce. They require pre-aerial photography and precise 3D modeling of the flight area, making them less suitable for time-sensitive missions (e.g., emergency rescue) or long-distance flight tasks. Therefore, the type of reference map should be chosen based on the actual mission requirements. Our dataset supports researchers in comprehensively evaluating their localization approaches with different reference maps.
-
-## Citation
-
-If you find this research useful, please cite our paper. Thank you!
-```
-@article{ye2025exploring,
-  title={Exploring the best way for UAV visual localization under Low-altitude Multi-view Observation Condition: a Benchmark},
-  author={Ye, Yibin and Teng, Xichao and Chen, Shuo and Li, Zhang and Liu, Leqi and Yu, Qifeng and Tan, Tao},
-  journal={arXiv preprint arXiv:2503.10692},
-  year={2025}
+```json
+{
+  "name": "./Data/Thermal-UAV/train/changsha/city_300_ortho_night/Thermal/xxx_T.JPG",
+  "lat": 28.2436611, # latitude
+  "lon": 112.9985009, # longitude
+  "abs_height": 341.354, # absolute height
+  "rel_height": 323.967, # relative take-off point altitude
+  "pitch": -90.0, # pitch
+  "yaw": 88.0, # yaw
+  "roll": 180.0, # roll
+  "cam_size": 9.83, # diagonal physical size of the sensor
+  "focal_len": 12.0, # focal length (mm)
+  "width": 1280.0, # image width
+  "height": 1024.0 # image height
 }
 ```
-<a name="License"></a>
-<!-- License -->
-## :warning: License
 
-See LICENSE.txt for more information.
+It is noted that we need to fill in the corresponding changsha geographic infomation in Regions_params/, as follows:
 
-<a name="Acknowledgments"></a>
-<!-- Acknowledgments -->
-## :gem: Acknowledgements
+```yaml
+changsha_UTM_SYSTEM: 49N
+changsha_SAMPLE_INTERVAL: 10
+changsha_HIGH_REF_PATH: ./Data/Reference_map/changsha/ref.tif
+changsha_HIGH_DSM_PATH: ./Data/Reference_map/changsha/dsm.tif
+changsha_HIGH_REF_initialX: 694811.4577 # UTM coordinate
+changsha_HIGH_REF_initialY: 3130673.6615 # UTM coordinate
+changsha_HIGH_REF_resolution: 0.3 # Align the resolution through upsampling on QGIS
+changsha_HIGH_DSM_resolution: 0.3 # Align the resolution through upsampling on QGIS
+changsha_HIGH_REF_COORDINATE: # If the satellite image and DSM are aligned. Their offset is 0
+  - 0.0
+  - 0.0
+changsha_HIGH_DSM_COORDINATE: 
+  - 0.0
+  - 0.0
+```
 
-There are some useful resources and libraries that we have used in your projects.
- - [Image Matching WebUI](https://github.com/Vincentqyw/image-matching-webui)
- - [CAMP: A Cross-View Geo-Localization Method using Contrastive Attributes Mining and Position-aware Partitioning](https://github.com/Mabel0403/CAMP)
- - [Roma: Robust Dense Feature Matching](https://github.com/Parskatt/RoMa)
- - [ALOS 30m DSM](https://www.eorc.jaxa.jp/ALOS/en/dataset/aw3d30/aw3d30\_e.htm)
+## Checkpoints
+
+### 1. Retrieval Model
+
+* **CAMP**
+
+```text
+Retrieval_Models/
+└── CAMP/
+  └── weights/
+    └── weights_0.9446_for_U1652.pth
+```
+
+* **DINOv3** and **DINOv2** are offered through torch.hub. They will automatically download if  your internet connection is available .
+
+### 2. Matching Model
+
+* **RoMa**
+
+```text
+Matching_Models/
+└── RoMa/
+    └── ckpt/
+        ├── roma_outdoor.pth
+        └── dinov2_vitl14_pretrain.pth
+```
+
+* **MINIMA**
+
+```text
+Matching_Models/
+└── MINIMA/
+    └── weights/
+        ├── minima_eloftr.pth
+        ├── minima_roma.pth
+        ├── minima_loftr.ckpt
+        ├── minima_lightglue.pth
+        └── minima_xoftr.ckpt
+```
+
+3) **RoMaV2** automatically download
+
+## Method
+
+In  `config.yaml`， choose the **MINIMA_Roma_DINOv**2 as retrieval method and  **MINIMA_Roma** as matching method. Our proposed SCC-Loc framework composes this combination. It is noted that when use **MINIMA_Roma_DINOv**2, it must use **MINIMA_Roma**, while the reverse is not true. Other combinations can be the comparision baseline.
+
+Then, enjoy the fun of operation through:
+
+```
+python Baseline.py
+```
+
+If you want to see the visualization, please set the `SHOW_RETRIEVAL_RESULT=True` in config.yaml. It will show retrieval, matching, final localization resules etc.
+
+## License
+
+We use the Apache License 2.0. See detailed information in LICENSE file.
+
+## Acknowledgements
+
+We are grateful for the publicly available resources and open-source libraries that have been instrumental in this work.
+
+* [A Cross-View Geo-Localization Method using Contrastive Attributes Mining and Position-aware Partitioning](https://github.com/Mabel0403/CAMP)
+* [DINOv2: Learning Robust Visual Features without Supervision](https://github.com/facebookresearch/dinov2/tree/main)
+* [DINOv3](https://github.com/facebookresearch/dinov3)
+* [RoMa: Robust Dense Feature Matching](https://github.com/Parskatt/RoMa)
+* [RoMa v2: Harder Better Faster Denser Feature Matching](https://github.com/Parskatt/romav2)
+* [MINIMA: Modality Invariant Image Matching](https://github.com/LSXI7/MINIMA)
+
+We are especially grateful to Yibin Ye et al. for their seminal benchmark [Exploring the best way for UAV visual localization under Low-altitude Multi-view Observation Condition: a Benchmark](https://github.com/UAV-AVL/Benchmark?tab=readme-ov-file)
+
+Thank you for your open-source spirit, which has significantly accelerated progress in the UAV visual geo-localization community. Salute to you!
