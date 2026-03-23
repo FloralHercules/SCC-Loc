@@ -1,11 +1,18 @@
+
 <div align="center">
   <img src="assets/UAV.png" alt="Logo" width="150"/>
+  <br><br>
   <h1>SCC-Loc: A Unified Semantic-Cascade-Consensus Framework for UAV Thermal Geo-Localization</h1>
- If you find our work useful, please consider giving us a ⭐️. Your support means a lot to us! 🥰
+  <p>
+    If you find our work useful, please consider giving us a ⭐️. 
+    Your support means a lot to us! 🥰
+  </p>
+</div>
+
+
 
 <div align="center">
   <img src="assets/Pipeline.png" alt="Logo" width="1000"/>
-
 
 <p>
 🎯 We present a unified Semantic-Cascade-Consensus framework (SCC-Loc) for cross-modal UAV thermal geo-localization in GNSS-denied environments.
@@ -17,6 +24,7 @@ We also construct Thermal-UAV, a comprehensive cross-modal benchmark dataset com
 
 <div align="center">
   <img src="assets/Dataset.png" alt="Logo" width="1000"/>
+</div>
 
 We construct the **Thermal-UAV** dataset which comprised 11,615 Thermal UAV images  (nadir view, multi-time, multi- scenario, flight sequence composition) using the DJI Matrice 4T drone around changsha. We split it as three sets: training (8,115), validation (1,150), and testing (2,350). Meanwhile, we collect the  0.26 m/px Google map and 5.29 m/px Digital Surface Model (DSM). The structure of Thermal-UAV is shown as follows:
 
