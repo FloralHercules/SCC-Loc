@@ -1,5 +1,6 @@
 # Data and outputs
-Data/
+Data/*
+!Data/.gitkeep
 Result/
 logs/
 evaluation_summary/
