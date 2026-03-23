@@ -1,6 +1,5 @@
-
 <div align="center">
-  <img src="assets/UAV.png" alt="Logo" width="150"/>
+  <img src="assets/UAV_log.png" alt="Logo" width="150"/>
   <br><br>
   <h1>SCC-Loc: A Unified Semantic-Cascade-Consensus Framework for UAV Thermal Geo-Localization</h1>
   <p>
@@ -9,11 +8,9 @@
   </p>
 </div>
 
-
 <div align="center">
   <img src="assets/Pipeline.png" alt="Logo" width="1000"/>
 </div>
-
 
 <p>
 🎯 We present a unified Semantic-Cascade-Consensus framework (SCC-Loc) for cross-modal UAV thermal geo-localization in GNSS-denied environments.
