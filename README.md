@@ -2,9 +2,6 @@
   <img src="assets/UAV_log.png" alt="Logo" width="150"/>
   <br><br>
   <h1>SCC-Loc: A Unified Semantic Cascade Consensus Framework for UAV Thermal Geo-Localization</h1>
-  <video src="assets/video.mp4" width="1000" controls muted loop playsinline>
-    Your browser does not support the video tag.
-  </video>
   <p>
     If you find our work useful, please consider giving us a ⭐️. 
     Your support means a lot to us! 🥰
