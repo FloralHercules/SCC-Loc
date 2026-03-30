@@ -25,7 +25,7 @@ We also construct Thermal-UAV, a comprehensive cross-modal benchmark dataset com
   <img src="assets/Dataset.png" alt="Logo" width="1000"/>
 </div>
 
-We construct the **Thermal-UAV** dataset which comprised 11,890 Thermal UAV images  (nadir view, multi-time, multi- scenario, flight sequence composition) using the DJI Matrice 4T drone around changsha. We split it as three sets: training (8,115), validation (1,425), and testing (2,350). Meanwhile, we collect the  0.26 m/px Google map and 5.29 m/px Digital Surface Model (DSM). The structure of Thermal-UAV is shown as follows:
+🀄We construct the **Thermal-UAV** dataset which comprised 11,890 Thermal UAV images  (nadir view, multi-time, multi- scenario, flight sequence composition) using the DJI Matrice 4T drone around changsha. We split it as three sets: training (8,115), validation (1,425), and testing (2,350). Meanwhile, we collect the  0.26 m/px Google map and 5.29 m/px Digital Surface Model (DSM). The structure of Thermal-UAV is shown as follows:
 
 ```text
 Data/
