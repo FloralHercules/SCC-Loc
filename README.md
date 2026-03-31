@@ -2,6 +2,7 @@
   <img src="assets/UAV_log.png" alt="Logo" width="150"/>
   <br><br>
   <h1>SCC-Loc: A Unified Semantic Cascade Consensus Framework for UAV Thermal Geo-Localization</h1>
+  <a href="https://arxiv.org/abs/XXXX.XXXXX"><img src="https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg" alt="arXiv"></a>
   <p>
     If you find our work useful, please consider giving us a ⭐️. 
     Your support means a lot to us! 🥰
@@ -143,6 +144,19 @@ python Baseline.py
 If you want to see the visualization, please set the `SHOW_RETRIEVAL_RESULT=True` in config.yaml. It will show retrieval, matching, final localization resules etc.
 
 * **Note:** The `utils.py` module has been temporarily withheld as it contains core utility functions essential to our framework. **We will release the complete codebase immediately upon paper acceptance.** Thank you for your understanding and patience.
+
+## Citation
+
+If you find this code or our Thermal-UAV dataset useful for your research, please consider citing our paper:
+
+```
+@article{sccloc2026,
+  title={SCC-Loc: A Unified Semantic Cascade Consensus Framework for UAV Thermal Geo-Localization},
+  author={Xiaoran Zhang, Yu Liu, Jinyu Liang, Kangqiushi Li, Zhiwei Huang, Huaxin Xiao},
+  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  year={2026}
+}
+```
 
 ## License
 
