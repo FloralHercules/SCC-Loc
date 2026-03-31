@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/UAV_log.png" alt="Logo" width="150"/>
+  <img src="assets/UAV_log.png" alt="logo head" width="150"/>
   <br><br>
   <h1>SCC-Loc: A Unified Semantic Cascade Consensus Framework for UAV Thermal Geo-Localization</h1>
   <a href="https://arxiv.org/abs/XXXX.XXXXX"><img src="https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg" alt="arXiv"></a>
