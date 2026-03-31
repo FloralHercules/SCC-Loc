@@ -142,6 +142,8 @@ python Baseline.py
 
 If you want to see the visualization, please set the `SHOW_RETRIEVAL_RESULT=True` in config.yaml. It will show retrieval, matching, final localization resules etc.
 
+* **Note:** The `utils.py` module has been temporarily withheld as it contains core utility functions essential to our framework. **We will release the complete codebase immediately upon paper acceptance.** Thank you for your understanding and patience.
+
 ## License
 
 We use the Apache License 2.0. See detailed information in LICENSE file.
