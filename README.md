@@ -18,9 +18,15 @@
   <img src="assets/Pipeline.png" alt="Logo" width="1000"/>
 </div>
 
-🎯 We present a unified Semantic-Cascade-Consensus framework (SCC-Loc) for cross-modal UAV thermal geo-localization in GNSS-denied environments.
-This approach is particularly useful for overcoming the profound modality gap between onboard thermal imagery and visible-light satellite maps, which typically causes spatial quantization biases, dense structural outliers, and deceptive visual decoys during pose estimation. By seamlessly integrating a shared DINOv2 backbone with our Semantic-Guided Viewport Alignment (SGVA) module, Cascaded Spatial-Adaptive Texture-Structure Filtering (C-SATSF) mechanism, and Consensus-Driven Reliability-Aware Position Selection (CD-RAPS) strategy, we achieve zero-shot, highly accurate absolute pose estimation without the need for domain-specific training.
-We also construct Thermal-UAV, a comprehensive cross-modal benchmark dataset comprising 11,890 thermal images that capture complex urban-rural topologies and multi-temporal (day-night) variations, paired with satellite ortho-photos and spatially aligned Digital Surface Models (DSMs). This dataset addresses current data scarcity and serves as a robust resource for evaluating all-weather UAV positioning algorithms.
+> 🎯 **SCC-Loc** is a zero-shot, cross-modal thermal geo-localization framework for UAVs operating in GNSS-denied environments.
+
+Matching onboard thermal images with visible-light satellite maps is challenging due to the massive modality gap. SCC-Loc tackles this by providing highly accurate absolute pose estimation  **without needing domain-specific training** .
+
+> **✨ Key Highlights:**
+
+* **Zero-Shot Capability:** Powered by a shared DINOv2 backbone, requiring no specific retraining for new environments.
+* **Robust Matching:** Overcomes dense structural outliers and visual decoys.
+* **Unified Framework:** Integrates Semantic-Guided Viewport Alignment, Spatial-Adaptive Filtering, and Consensus-Driven Position Selection.
 
 ## Dataset
 
@@ -28,7 +34,7 @@ We also construct Thermal-UAV, a comprehensive cross-modal benchmark dataset com
   <img src="assets/Dataset.png" alt="Logo" width="1000"/>
 </div>
 
-🀄 We construct the **Thermal-UAV** dataset which comprised 11,890 Thermal UAV images  (nadir view, multi-time, multi- scenario, flight sequence composition) using the DJI Matrice 4T drone around changsha. We split it as three sets: training (8,115), validation (1,425), and testing (2,350). Meanwhile, we collect the  0.26 m/px Google map and 5.29 m/px Digital Surface Model (DSM). The structure of Thermal-UAV is shown as follows:
+🀄 We constructed the **Thermal-UAV** dataset, comprising 11,890 thermal UAV images captured using a DJI Matrice 4T drone around Changsha. These images feature nadir views, multi-temporal and multi-scenario data, and continuous flight sequences. We split the dataset into three sets: 8,115 for training, 1,425 for validation, and 2,350 for testing. Additionally, we collected corresponding Google Maps satellite imagery at 0.26 m/px and a Digital Surface Model (DSM) at 5.29 m/px. The directory structure of the Thermal-UAV dataset is as follows:
 
 ```text
 Data/
