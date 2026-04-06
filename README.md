@@ -2,7 +2,7 @@
   <img src="assets/UAV_log.png" alt="logo head" width="150"/>
   <br><br>
   <h1>SCC-Loc: A Unified Semantic Cascade Consensus Framework for UAV Thermal Geo-Localization</h1>
-  <a href="https://arxiv.org/abs/XXXX.XXXXX"><img src="https://img.shields.io/badge/arXiv-XXXX.XXXXX-b31b1b.svg" alt="arXiv"></a>
+  <a href="http://arxiv.org/abs/2604.03120"><img src="https://img.shields.io/badge/arXiv-2604.03120-b31b1b.svg" alt="arXiv"></a>
   <a href="assets/video.mp4"><img src="https://img.shields.io/badge/Video-Demo-FF0000?logo=youtube&logoColor=white" alt="Video"></a>
   <a href="https://github.com/FloralHercules/SCC-Loc"><img src="https://img.shields.io/github/stars/FloralHercules/SCC-Loc?style=social" alt="Stars"></a>
   <p>
@@ -53,7 +53,7 @@ Data/
   └── test/
 ```
 
-The Thermal-UAV dataset and checkpoint are provided in [Baidu Netdisk](https://pan.baidu.com/s/1gORHGMLm3yQ75tCFmCPQLQ?pwd=NUDT) and [Hugging Face](https://huggingface.co/datasets/FloralHercules/Thermal-UAV/tree/main). You can use the `process.ipynb` to get the metadate of Thermal-UAV JSON format, as follows:
+The Thermal-UAV dataset and checkpoint are provided in [Baidu Netdisk](https://pan.baidu.com/s/1zXn3f9QrO07IcKHr8kmNnQ?pwd=53ea) and [Hugging Face](https://huggingface.co/datasets/FloralHercules/Thermal-UAV/tree/main). You can use the `process.ipynb` to get the metadate of Thermal-UAV JSON format, as follows:
 
 ```json
 {
@@ -145,7 +145,7 @@ python Baseline.py
 
 If you want to see the visualization, please set the `SHOW_RETRIEVAL_RESULT=True` in config.yaml. It will show retrieval, matching, final localization resules etc.
 
-* **Note:** The `utils.py` module has been temporarily withheld as it contains core utility functions essential to our framework. **We will release the complete codebase immediately upon paper acceptance.** Thank you for your understanding and patience.
+🚀 Furthermore , `process.ipynb` provides useful scripts for constructing custom datasets and reproducing experimental results. Given the  current strict regulations and flight restrictions on UAVs , we warmly invite researchers dedicated to thermal geo-localization to contribute to this open-source dataset,  **expanding its coverage to encompass diverse countries, regions, environments, and viewpoints** .
 
 ## Citation
 
@@ -155,7 +155,7 @@ If you find this code or our Thermal-UAV dataset useful for your research, pleas
 @article{sccloc2026,
   title={SCC-Loc: A Unified Semantic Cascade Consensus Framework for UAV Thermal Geo-Localization},
   author={Xiaoran Zhang, Yu Liu, Jinyu Liang, Kangqiushi Li, Zhiwei Huang, Huaxin Xiao},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
+  journal={arXiv:2604.01581},
   year={2026}
 }
 ```
