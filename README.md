@@ -18,11 +18,11 @@
   <img src="assets/Pipeline.png" alt="Logo" width="1000"/>
 </div>
 
-> 🎯 **SCC-Loc** is a zero-shot, cross-modal thermal geo-localization framework for UAVs operating in GNSS-denied environments.
+🎯 **SCC-Loc** is a zero-shot, cross-modal thermal geo-localization framework for UAVs operating in GNSS-denied environments.
 
 Matching onboard thermal images with visible-light satellite maps is challenging due to the massive modality gap. SCC-Loc tackles this by providing highly accurate absolute pose estimation  **without needing domain-specific training** .
 
-> **✨ Key Highlights:**
+**✨ Key Highlights:**
 
 * **Zero-Shot Capability:** Powered by a shared DINOv2 backbone, requiring no specific retraining for new environments.
 * **Robust Matching:** Overcomes dense structural outliers and visual decoys.
