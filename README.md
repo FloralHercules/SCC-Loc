@@ -135,7 +135,7 @@ Matching_Models/
         └── minima_xoftr.ckpt
 ```
 
-3) **RoMaV2** automatically download
+* **RoMaV2** automatically download
 
 ## Method
 
