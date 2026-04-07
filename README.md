@@ -47,12 +47,12 @@ Data/
 └── Thermal-UAV/
   ├── train/
   │   └── changsha/
-  │       └── <place_name>/
+  │       └── <NUDT>/
   │           └── Thermal/
   │               ├── xxx1.JPG
   │               ├── xxx2.JPG
-  |		  └── ...
-  |	      └──  Thermal_info.csv
+  |	          └──  Thermal_info.csv
+  |		    └── ...
   ├── valid/
   └── test/
 ```
