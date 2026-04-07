@@ -52,7 +52,7 @@ Data/
   │               ├── xxx1.JPG
   │               ├── xxx2.JPG
   |	          └──  Thermal_info.csv
-  |		    └── ...
+  │       └── ...
   ├── valid/
   └── test/
 ```
