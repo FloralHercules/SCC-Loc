@@ -49,22 +49,25 @@ def compute_shift_from_heatmap(heatmap, grid_size=None, base_gain=1.0, max_shift
         cog_y = (h_map * y_norm[i]).sum() / total_mass
         
         # Spatial Variance / Uncertainty
-        dist_sq = (x_norm[i] - cog_x)**2 + (y_norm[i] - cog_y)**2
-        variance = (h_map * dist_sq).sum() / total_mass
-        std_dev = torch.sqrt(variance)
-        uncertainty_score = torch.clamp(std_dev * 5.0, 0.0, 1.0) 
-        adaptive_gain = base_gain * (1.0 + 0.5 * (1.0 - uncertainty_score))
+        # dist_sq = (x_norm[i] - cog_x)**2 + (y_norm[i] - cog_y)**2
+        # variance = (h_map * dist_sq).sum() / total_mass
+        # std_dev = torch.sqrt(variance)
+        # uncertainty_score = torch.clamp(std_dev * 5.0, 0.0, 1.0) 
+        # adaptive_gain = base_gain * (1.0 + 0.5 * (1.0 - uncertainty_score))
         
-        scale_factor = 1.0 + 0.2 * uncertainty_score
+        # scale_factor = 1.0 + 0.2 * uncertainty_score
+        scale_factor = 1.0 + 0.2 # 0.2 the varialbe of alpha default configure in paper
         
-        # Shift calculation. The normalize center is 0.5
-        shift_x = (cog_x - 0.5) * adaptive_gain
-        shift_y = (cog_y - 0.5) * adaptive_gain
+        # shift_x = (cog_x - 0.5) * adaptive_gain
+        # shift_y = (cog_y - 0.5) * adaptive_gain
+        shift_x = (cog_x - 0.5) * 1 # 1 the varialbe of beta default configure in paper
+        shift_y = (cog_y - 0.5) * 1 # 1 the varialbe of beta default configure in paper
         
         shift_x = torch.clamp(shift_x, -max_shift_limit, max_shift_limit)
         shift_y = torch.clamp(shift_y, -max_shift_limit, max_shift_limit)
         
-        results.append((shift_x.item(), shift_y.item(), scale_factor.item()))
+        # results.append((shift_x.item(), shift_y.item(), scale_factor.item()))
+        results.append((shift_x.item(), shift_y.item(), scale_factor))
         
     return results
 
