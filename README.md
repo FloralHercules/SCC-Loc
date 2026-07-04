@@ -65,7 +65,7 @@ The Thermal-UAV dataset and checkpoint are provided in [Baidu Netdisk](https://p
   "lat": 28.2436611, # latitude
   "lon": 112.9985009, # longitude
   "abs_height": 341.354, # absolute height
-  "rel_height": 323.967, # relative take-off point altitude
+  "rel_height": 323.967, # UAV-to-ground distance measured by laser rangefinder (direct use this character due to the vertical angle of view)
   "pitch": -90.0, # pitch
   "yaw": 88.0, # yaw
   "roll": 180.0, # roll
