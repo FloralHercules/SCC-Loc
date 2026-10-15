@@ -4,6 +4,7 @@
   <h1>SCC-Loc: A Unified Semantic Cascade Consensus Framework for UAV Thermal Geo-Localization</h1>
   <a href="http://arxiv.org/abs/2604.03120"><img src="https://img.shields.io/badge/arXiv-2604.03120-b31b1b.svg" alt="arXiv"></a>
   <a href="assets/video.mp4"><img src="https://img.shields.io/badge/Video-Demo-FF0000?logo=youtube&logoColor=white" alt="Video"></a>
+  <a href="https://huggingface.co/datasets/FloralHercules/Thermal-UAV"><img src="https://img.shields.io/badge/Hugging%20Face-Thermal--UAV-ffd21e.svg" alt="Thermal-UAV on Hugging Face"></a>
   <a href="https://github.com/FloralHercules/SCC-Loc"><img src="https://img.shields.io/github/stars/FloralHercules/SCC-Loc?style=social" alt="Stars"></a>
   <p>
     If you find our work useful, please consider giving us a ⭐️. 
