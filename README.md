@@ -157,7 +157,7 @@ If you want to see the visualization, please set the `SHOW_RETRIEVAL_RESULT=True
 If you find this code or our Thermal-UAV dataset useful for your research, please consider citing our paper:
 
 ```
-@ARTICLE{11622684,
+@article{zhang2026sccloc,
   author={Zhang, Xiaoran and Liu, Yu and Liang, Jinyu and Li, Kangqiushi and Huang, Zhiwei and Xiao, Huaxin},
   journal={IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing},
   title={SCC-Loc: A Unified Semantic Cascade Consensus Framework for UAV Thermal Geo-Localization},
